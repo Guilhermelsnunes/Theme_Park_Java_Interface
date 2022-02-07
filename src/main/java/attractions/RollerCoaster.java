@@ -17,19 +17,13 @@ public class RollerCoaster  extends Attraction implements ISecurity, IReviewed, 
     }
 
 
-    public double defaultPrice () {
-        return defaultPrice() * 2;
-    }
 
-    @Override
-    public boolean priceFor(Visitor visitor) {
-        return false;
+    public double defaultPrice (Visitor visitor) {
+        if(visitor.getHeight() > 200) {
+            return defaultPrice() * 2;
+        }
+        return defaultPrice();
     }
-
-//    @Override
-//    public boolean priceFor (Visitor visitor) {
-//        return visitor.getHeight() >= 200;
-//    }
 
 
 

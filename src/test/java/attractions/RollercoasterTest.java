@@ -51,7 +51,7 @@ public class RollercoasterTest {
     @Test
     public void tallAdult(){
         Visitor tall = new Visitor(35,205,300.00);
-        assertEquals(16.80, rollerCoaster.defaultPrice(tall));
+        assertEquals(16.80, rollerCoaster.defaultPrice(tall), 0.0);
     }
 
 //    @Test
