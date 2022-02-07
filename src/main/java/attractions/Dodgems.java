@@ -14,11 +14,13 @@ public class Dodgems extends Attraction implements IReviewed, ITicketed {
 
     @Override
     public double defaultPrice() {
-        return defaultPrice() /2 ;
+        return 4.50;
     }
 
-    @Override
-    public boolean priceFor(Visitor visitor) {
-        return false;
+    public double priceFor(Visitor visitor) {
+        if(visitor.getAge() < 12){
+            return defaultPrice() / 2;
+        }
+        return defaultPrice();
     }
 }
