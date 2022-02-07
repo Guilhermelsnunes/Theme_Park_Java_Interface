@@ -50,15 +50,10 @@ public class RollercoasterTest {
 
     @Test
     public void tallAdult(){
-        Visitor tall = new Visitor(35,205,300.00);
-        assertEquals(16.80, rollerCoaster.defaultPrice(tall), 0.0);
-    }
+        Visitor tallAdult = new Visitor (65,210,500.00);
+        assertEquals(16.80, rollerCoaster.priceFor(tallAdult));
 
-//    @Test
-//    public void childPrice(){
-//        Visitor child = new Visitor(5,95,25.00);
-//        assertEquals(16.80, );
-//    }
+
 
 
 }
